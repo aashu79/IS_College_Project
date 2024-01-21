@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Product 1</title>
+  </head>
+  <body>
+    <!-- --------------------navbar---------------------------- -->
+    <section>
+      <div class="nav-bar">
+        <div class="left-nav">
+          <h2>Printer</h2>
+        </div>
+        <div class="right-nav">
+          <a href="../HomePage.html" style="text-decoration: none; color: black"
+            ><p>Home</p></a
+          >
+          <a
+            href="./ProductListing.html"
+            style="text-decoration: none; color: black"
+            ><p>Product</p></a
+          >
+          <a href="./BlogPage.html" style="text-decoration: none; color: black"
+            ><p>Blog</p></a
+          >
+          <a
+            href="./ResearchPage.html"
+            style="text-decoration: none; color: black"
+            ><p>Research</p></a
+          >
+          <a
+            href="./AboutUsPage.html"
+            style="text-decoration: none; color: black"
+            ><p>About Us</p></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------Product Information----------------------------------- -->
+    <div class="description-container">
+      <div class="desc-image"><img src="../assets/image6.jpeg" alt="" /></div>
+      <div class="desc-information">
+        <h2 style="font-weight: 30px; color: rgb(171, 10, 10)">
+          Epson L130 Single Function Inkjet Printer
+        </h2>
+        <h3 style="margin-top: 20px">Key features:</h3>
+        <ul>
+          <li>Output: Color</li>
+          <li>USB | USB</li>
+          <li>Print Speed Mono A4: 30 ppm</li>
+          <li>Duty cycle (monthly, A4):10000 pages</li>
+          <li>Supported OS: Windows,macOS, Linux</li>
+        </ul>
+        <h3>Descrption:</h3>
+        <p>
+          A 70 ml refill ink bottle (sold separately) can yield up to 4000 pages
+          (black) and up to 6500 pages (color) at low running costs. This
+          printer offers up to 27 black and white pages per minute, and up to 15
+          colored pages per minute. Print high-quality documents for all your
+          personal and creative needs. Boasting a high resolution of up to
+          5760X1440 dpi, this printer ensures bold text and sharp images.
+        </p>
+        <div class="btn-container">
+          <div class="quantity-container">
+            <h5 style="display: block">Quanity:</h5>
+            <button style="font-size: 15px" id="sub" onclick="handleSub()">
+              -
+            </button>
+
+            <input type="text" id="quantity-input" value="0" />
+            <button style="font-size: 15px" id="add" onclick="handleAdd()">
+              +
+            </button>
+          </div>
+          <div class="btn">
+            <button onclick="handleAddToCart()" id="addToCart">
+              Add To Cart
+            </button>
+
+            <button
+              style="background-color: rgb(196, 4, 4)"
+              id="removeFromCart"
+              onclick="handleRemoveFromCart()"
+            >
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------footer end------------------------------- -->
+    <section>
+      <div class="footer-container">
+        <div class="footer">
+          <div class="footer-brand">
+            <h1 style="font-size: 20px">Printer</h1>
+          </div>
+          <div class="footer-nav">
+            <a
+              href="../HomePage.html"
+              style="text-decoration: none; color: white"
+              ><p>Home</p></a
+            >
+            <a
+              href="./ProductListing.html"
+              style="text-decoration: none; color: white"
+              ><p>Product</p></a
+            >
+            <a
+              href="./BlogPage.html"
+              style="text-decoration: none; color: white"
+              ><p>Blog</p></a
+            >
+            <a
+              href="./ResearchPage.html"
+              style="text-decoration: none; color: white"
+              ><p>Research</p></a
+            >
+            <a
+              href="./AboutUsPage.html"
+              style="text-decoration: none; color: white"
+              ><p>About Us</p></a
+            >
+          </div>
+
+          <div class="footer-contact">
+            <p>
+              <span style="font-weight: bold">Email: </span>printer@gmail.com
+            </p>
+            <p>
+              <span style="font-weight: bold">Contact: </span>printer@gmail.com
+            </p>
+          </div>
+        </div>
+        <hr width="95%" style="margin: 20px auto 10px auto; color: white" />
+        <p style="width: 20%; margin: 20px auto 5px auto; color: white">
+          &copy; 2024 printer
+        </p>
+      </div>
+    </section>
+
+    <script>
+      function handleAddToCart() {
+        document.getElementById("quantity-input").value = 1;
+        const addButton = document.getElementById("addToCart");
+        const remove = document.getElementById("removeFromCart");
+        addButton.style.display = "none";
+        remove.style.display = "inline-block";
+      }
+      function handleRemoveFromCart() {
+        alert("Removed from cart");
+        document.getElementById("quantity-input").value = 0;
+        const addButton = document.getElementById("addToCart");
+        const remove = document.getElementById("removeFromCart");
+        addButton.style.display = "inline-block";
+        remove.style.display = "none";
+      }
+    </script>
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>
